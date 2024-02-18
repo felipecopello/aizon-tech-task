@@ -30,8 +30,12 @@ When ("I login using valid credentials", () => {
     cy.get('a#nameofuser.nav-link').should('have.text', 'Welcome ' + random_username);
 	});
 
-Then ("I logout", () => {
+When ("I logout", () => {
     // Log out
     cy.get('#logout2').click();
+    cy.get('#signin2').should('be.visible');
+});
+
+Then ("I should be logged out", () => {
     cy.get('#signin2').should('be.visible');
 });

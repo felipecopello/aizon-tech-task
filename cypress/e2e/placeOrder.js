@@ -11,9 +11,8 @@ Given ("I have an item in the cart", () => {
       const randomIndex = Cypress._.random(length - 1);
 
       // We click a random product, and assert we are taken to that product page
-      cy.get('.card > .card-block > .card-title > .hrefch').eq(randomIndex).invoke('text').then(text => {
+      cy.get('.card > .card-block > .card-title > .hrefch').eq(randomIndex).click().invoke('text').then(text => {
         clickedText = text;
-        cy.get('.card > .card-block > .card-title > .hrefch').eq(randomIndex).click();
         cy.get('.name').should('have.text', clickedText);
         cy.contains('Add to cart').click();
         cy.on('window:alert', (message) => {
@@ -22,7 +21,7 @@ Given ("I have an item in the cart", () => {
         cy.contains('Cart').click();
 
         // The selected item should be displayed in the cart
-        cy.contains(clickedText).should('be.visible');
+        cy.contains('td', clickedText).should('be.visible');
 		});
 	});
 });
@@ -40,6 +39,9 @@ When ("I complete the order placement form", () => {
 
 Then ("I place the order", () => {
 	cy.contains('.btn', 'Purchase').click();
+});
+
+Then ("The placed order sign should be displayed", () => {
 	cy.get('.sweet-alert > h2').should('be.visible').should('have.text','Thank you for your purchase!');
 	cy.get('.sa-success').should('be.visible');
 	cy.get('.lead').should(($element) => {
