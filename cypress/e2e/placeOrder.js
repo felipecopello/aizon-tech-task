@@ -21,7 +21,7 @@ Given ("I have an item in the cart", () => {
         cy.contains('Cart').click();
 
         // The selected item should be displayed in the cart
-        cy.contains('td', clickedText).should('be.visible');
+        cy.contains('td', clickedText.trim()).should('be.visible');
 		});
 	});
 });

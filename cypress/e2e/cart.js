@@ -24,7 +24,7 @@ When ("I add a random item to the cart", () => {
         cy.contains('Cart').click();
 
         // The selected item should be displayed in the cart
-        cy.contains('td', clickedText).should('exist');
+        cy.contains('td', clickedText.trim()).should('exist');
 		});
 	});
 });
