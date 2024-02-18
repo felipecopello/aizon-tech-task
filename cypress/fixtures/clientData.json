@@ -1,0 +1,12 @@
+{
+  "client": [
+    {
+      "Name": "Felipe",
+      "Country": "ES",
+      "City": "Barcelona",
+      "CreditCard": "0000 1111 2222 3333",
+      "Month": "12",
+      "Year": "2025"
+    }
+  ]
+}

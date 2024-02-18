@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@cypress/webpack-preprocessor": "latest",
+    "cypress": "latest",
+    "webpack": "latest"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^6.0.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.2"
+    },
+  "stepDefinitions": [
+    "cypress/e2e/[filepath]/**/*.{js,ts}",
+    "cypress/e2e/[filepath].{js,ts}",
+    "cypress/support/step_definitions/*.{js,ts}"
+  ],
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true
+    }
+  }
+}

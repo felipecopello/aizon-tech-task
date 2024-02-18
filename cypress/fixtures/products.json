@@ -1,0 +1,13 @@
+{
+  "products": [
+    {
+      "name": "Phones"
+    },
+    {
+      "name": "Laptops"
+    },
+    {
+      "name": "Monitors"
+    }
+  ]
+}
