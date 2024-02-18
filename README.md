@@ -1,6 +1,9 @@
 # aizon-tech-task
-
-npx cypress run --spec "cypress/e2e/**/*.feature"
+STEPS to execute the tests:
+1) Clone repository 
+2) npm init -y 
+3) npm install cypress 
+4) npx cypress run --spec "cypress/e2e/**/*.feature"
 
 1) the tests are signUp.feature, cart.feature and placeOrder.feature
 2) The automated tests were built with a focus on clarity, validation, and efficiency. Each scenario followed the Given-When-Then structure for clear representation of user actions and outcomes. Test steps were designed for readability and easy maintenance, while covering both positive cases for comprehensive validation.
