@@ -1,9 +1,9 @@
 # aizon-tech-task
 STEPS to execute the tests:
-1 Clone repository 
-2 npm init -y 
-3 npm install cypress 
-4 npx cypress run --spec "cypress/e2e/**/*.feature"
+1) Clone repository 
+2) npm init -y 
+3) npm install cypress 
+4) npx cypress run --spec "cypress/e2e/**/*.feature"
 
 Other option is running them from cypress UI
 npx cypress open
